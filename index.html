@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="ie8">
+<head>
+	<meta charset="UTF-8">
+	<title>Align</title>
+	
+	<style>
+		*, html {margin: 0; padding: 0;}
+		html, body {height: 100%; }
+		body {background: #f2f2f2; font-family: Arial; font-size: 14px; line-height: 1.6;}
+
+		/* BASIC PARENT + ITEM STYLING */
+		.align-item {padding: 24px; background: #FFF; max-width: 50%;}
+		
+		/* SET A HEIGHT FOR THE PARENT CONTAINER */
+		.align {height: 100%;}
+				
+		/* FLEXBOX > IE10+ */
+		.flexbox .align {display: flex; align-items: center; justify-content: center; height: 100vh;}
+
+		/* NO-FLEXBOX > IE9+ */
+		.no-flexbox  .align-item { position: relative; top: 50%; transform:translateY(-50%); -ms-transform:translateY(-50%); display: block; margin: auto;}
+
+		/* IE8 FALLBACK */
+		.ie8 .align {text-align: center; }
+		.ie8 .align:before {content: ''; display: inline-block; height: 100%; vertical-align: middle; }
+ 		.ie8 .align-item {display: inline-block; vertical-align: middle; text-align: left;}
+	</style>
+
+</head>
+<body>
+
+	<div class="align">
+	  <div class="align-item">
+	  	<h2>Lorem ipsum dolor sit amet</h2>
+	  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore doloribus asperiores libero dignissimos quam, excepturi expedita consectetur ex est laudantium necessitatibus, animi quo. Veritatis ipsa in inventore, incidunt velit eos eaque at earum, ut modi blanditiis veniam facere dolorum adipisci ipsum hic iusto porro iste illum architecto repudiandae cupiditate rerum iure nemo nihil. Accusamus aperiam, iusto fugit doloribus cumque, molestias dignissimos earum, laudantium quis voluptates odio minus, saepe. Magnam quos deserunt tenetur ducimus nemo facere, aliquam amet porro vero nesciunt, numquam ea beatae quaerat obcaecati, suscipit vel! Nemo optio quos quia obcaecati blanditiis reiciendis pariatur, quae in, eos possimus doloremque.</p>
+	  </div>
+	</div>
+	
+</body>
+</html>
